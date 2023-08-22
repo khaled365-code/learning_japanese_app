@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:language_learning_app/components/numbers_item.dart';
-import 'package:language_learning_app/models/number_model.dart';
+import 'package:language_learning_app/components/reusable_item.dart';
+import 'package:language_learning_app/models/item_model.dart';
 
 
 
 
 
-class Numberspage extends StatelessWidget {
+class Numbersscreen extends StatelessWidget {
 
 
 
-  List<NumberModel>numbers=[
-    NumberModel(image: 'assets/images/numbers/number_one.png', gpText: 'ichi', enText: 'one'),
-  NumberModel(image: 'assets/images/numbers/number_two.png', gpText: 'ni', enText: 'two'),
-  NumberModel(image: 'assets/images/numbers/number_three.png', gpText: 'san', enText: 'three'),
-  NumberModel(image: 'assets/images/numbers/number_four.png', gpText: 'yon', enText: 'four'),
-  NumberModel(image: 'assets/images/numbers/number_five.png', gpText: 'go', enText: 'five'),
-  NumberModel(image: 'assets/images/numbers/number_six.png', gpText: 'roku', enText: 'six'),
-  NumberModel(image: 'assets/images/numbers/number_seven.png', gpText: 'nana', enText: 'seven'),
-  NumberModel(image: 'assets/images/numbers/number_eight.png', gpText: 'hachi', enText: 'eight'),
-  NumberModel(image: 'assets/images/numbers/number_nine.png', gpText: 'kyu', enText: 'nine'),
-  NumberModel(image: 'assets/images/numbers/number_ten.png', gpText: 'jU', enText: 'ten')
+  List<ItemModel>numbers=[
+    ItemModel(image: 'assets/images/numbers/number_one.png', gpText: 'ichi', enText: 'one'),
+  ItemModel(image: 'assets/images/numbers/number_two.png', gpText: 'ni', enText: 'two'),
+  ItemModel(image: 'assets/images/numbers/number_three.png', gpText: 'san', enText: 'three'),
+  ItemModel(image: 'assets/images/numbers/number_four.png', gpText: 'yon', enText: 'four'),
+  ItemModel(image: 'assets/images/numbers/number_five.png', gpText: 'go', enText: 'five'),
+  ItemModel(image: 'assets/images/numbers/number_six.png', gpText: 'roku', enText: 'six'),
+  ItemModel(image: 'assets/images/numbers/number_seven.png', gpText: 'nana', enText: 'seven'),
+  ItemModel(image: 'assets/images/numbers/number_eight.png', gpText: 'hachi', enText: 'eight'),
+  ItemModel(image: 'assets/images/numbers/number_nine.png', gpText: 'kyu', enText: 'nine'),
+  ItemModel(image: 'assets/images/numbers/number_ten.png', gpText: 'jU', enText: 'ten')
 
   ];
   @override
@@ -37,7 +37,7 @@ class Numberspage extends StatelessWidget {
     
     body:ListView.separated(
            itemCount: numbers.length,
-         itemBuilder: (context, index) => Itemnumber(number: numbers[index]),
+         itemBuilder: (context, index) => ReusableItem(item: numbers[index],color: Colors.orange),
          separatorBuilder: (context, index) => SizedBox(height: 5,),
 
 

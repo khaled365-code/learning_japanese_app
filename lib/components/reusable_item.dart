@@ -1,34 +1,41 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-import '../models/number_model.dart';
+import '../models/item_model.dart';
+
+
+/*
+
+   This reusable item is used for Colors/family/numbers screens only
 
 
 
-class Itemnumber extends StatelessWidget {
+*/
+class ReusableItem extends StatelessWidget {
 
-  const Itemnumber({required this.number});
+  const ReusableItem({required this.item,required this.color});
 
-  final NumberModel number;
+  final ItemModel item;
+  final Color color;
   @override
   Widget build(BuildContext context) {
 
   return  Column(
     children: [
       Container(
-        color: Colors.orange,
+        color: color,
         child: Row(
           children: [
             Container(
-                color: Color(0xffFFF6DC),
-                child: Image.asset(number.image)),
+                color: Colors.yellow[200],
+                child: Image.asset(item.image!)),
             Container(
-              padding: EdgeInsetsDirectional.only(start: 10),
+              padding: EdgeInsetsDirectional.only(start: 12),
               child: Column(
                 children: [
-                  Text('${number.gpText}',style: TextStyle(fontSize: 20,color: Colors.white)),
+                  Text('${item.gpText}',style: TextStyle(fontSize: 20,color: Colors.white,)),
                   SizedBox(height: 10,),
-                  Text('${number.enText}',style: TextStyle(fontSize: 20,color: Colors.white)),
+                  Text('${item.enText}',style: TextStyle(fontSize: 20,color: Colors.white)),
                 ],
               ),
             ),

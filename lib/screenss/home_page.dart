@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:language_learning_app/components/homepage_item.dart';
+import 'package:language_learning_app/screenss/colors_page.dart';
 import 'package:language_learning_app/screenss/family_page.dart';
 import 'package:language_learning_app/screenss/numbers_page.dart';
+import 'package:language_learning_app/screenss/phrases_page.dart';
 
 
 
@@ -23,12 +25,13 @@ class Home extends StatelessWidget {
 
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Category(
             onTap: ()
             {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Numberspage();
+                return Numbersscreen();
               } ,));
             },
             text: 'Numbers',
@@ -45,6 +48,7 @@ class Home extends StatelessWidget {
           Category(
             onTap: ()
             {
+              Navigator.push(context,MaterialPageRoute(builder: (context) => Colorsscreen(),));
 
             },
             text: 'Colors',
@@ -53,7 +57,7 @@ class Home extends StatelessWidget {
           Category(
             onTap: ()
             {
-
+             Navigator.push(context, MaterialPageRoute(builder: (context) => Phrasesscreen(),));
             },
             text: 'Phrases',
             color: Colors.blueAccent,
